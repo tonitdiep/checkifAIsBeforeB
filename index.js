@@ -19,4 +19,14 @@ Hence, not every 'a' appears before every 'b' and we return false.
  * @param {string} s
  * @return {boolean}
  */
-var checkString = function(s) {}
+var checkString = function(s) {
+  //when is this false: b appears before a
+    let bIsFirst = 'ba';
+    return s.indexOf(bIsFirst) === -1;
+    //or
+    return s.indexOf('ba') == -1;
+    
+   
+
+
+}
