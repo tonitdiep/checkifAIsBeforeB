@@ -25,8 +25,28 @@ var checkString = function(s) {
     return s.indexOf(bIsFirst) === -1;
     //or
     return s.indexOf('ba') == -1;
-    
+   //or 
+
+    let bIsFirst = false
+    for(let nextChar of s){
+
+        if (bIsFirst && nextChar === 'a') return false;  
+   
+        if (nextChar === 'b') bIsFirst = true;
+ 
+    }  
+       
+    return true 
    
 
 
 }
+
+/**
+ * PUSEDOCODE
+if(!s.findIndex('a')){
+       return true
+// check for how a and b are appearing (sort?)
+// only true, if every 'a' character appears before every 'b' in the string
+// return false when it doesn't 
+*/
